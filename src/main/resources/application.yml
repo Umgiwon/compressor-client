@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: compressor-client
+
+grpc:
+  client:
+    compressor-service:
+      address: static://localhost:6565  # ?? ?? (IP:??)
+      negotiationType: plaintext        # TLS ?? ?? (???)
+
+logging:
+  level:
+    root: INFO
+    com.example.client: DEBUG          # ??? ?? ??? ??
+    io.grpc: WARN                      # gRPC ?? ??
+
+modbus:
+  port-name: COM3                      # Windows: COM3 / Linux: /dev/ttyUSB0
+  baud-rate: 9600
+  data-bits: 8
+  stop-bits: 1
+  parity: 0                            # 0: None, 1: Odd, 2: Even
+  slave-id: 1
