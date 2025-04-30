@@ -69,8 +69,10 @@ dependencies {
     // gRPC
     implementation 'net.devh:grpc-client-spring-boot-starter:2.15.0.RELEASE'
 
-    // modbus4j for RTU communication
-    implementation 'com.serotonin:modbus4j:3.1.2'
+    // modbus4j for RTU
+    implementation 'com.serotonin:modbus4j:3.0.3'
+    implementation 'com.fazecast:jSerialComm:2.10.4'
+
 
     // Configuration binding
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'

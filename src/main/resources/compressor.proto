@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.miro.compressorclient";
+option java_outer_classname = "CompressorProto";
+
+service CompressorService {
+  rpc SendSensorData(stream DataRequest) returns (stream DataResponse);
+}
+
+message DataRequest {
+  string deviceId = 1;
+  int32  temperature = 2;
+  int64 timestamp = 3;
+}
+
+message DataResponse {
+  string message = 1;
+}
